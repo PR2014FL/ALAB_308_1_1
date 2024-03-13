@@ -1,8 +1,8 @@
 // The initial numbers that must be verified.
-const n1 = 10;
-const n2 = 15;
-const n3 = 20;
-const n4 = 5;
+const n1 = 22;
+const n2 = 13;
+const n3 = 7;
+const n4 = 8;
 
 // Check one: add up to 50
 // This is a fairly simple operation using
@@ -43,3 +43,38 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
   ((n1 % 2) + (n2 % 2) + (n3 % 2) + (n4 % 2) >= 2) && 
   !(n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25) && 
   (n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 != n4);
+/////////////////////////////
+////Part 1: Math Problems////
+/////////////////////////////
+ /*Implement the following:
+Check if all numbers are divisible by 5. Cache the result in a variable. 
+*/
+const allDivisibleBy5 = n1 % 5 === 0 && n2 % 5 === 0 && n3 % 5 === 0 && n4 % 5 === 0;
+console.log("Is all Divisible by 5: " , allDivisibleBy5)
+
+//Check if the first number is larger than the last. Cache the result in a variable.
+const firstLargerThanLast = n1 > n4 
+console.log("Is First Larger Than Last: " ,firstLargerThanLast)
+
+/*Accomplish the following arithmetic chain:
+Subtract the first number from the second number.
+Multiply the result by the third number.
+Find the remainder of dividing the result by the fourth number.
+*/
+const arithmeticChain = ((n2 - n1) * n3) % n4
+console.log(arithmeticChain)
+
+/*Change the way that isOver25 calculates so that we do not need to use the NOT operator
+ (!) in other logic comparisons. Rename the variable as appropriate.
+ */
+
+const isNotOver25 = n1 <= 25 && n2 <= 25 && n3 <= 25 && n4 <= 25
+console.log(isNotOver25)
+
+console.log("Is divisble by 5: ", allDivisibleBy5);
+console.log("Is First Larger Than Last: " ,firstLargerThanLast);
+console.log("Arithmetic Chain: ", arithmeticChain);
+console.log("Is not over 25: ", isNotOver25);
+
+//Part 2: Practical Math in Part2Script.js
+
